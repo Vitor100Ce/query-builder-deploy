@@ -13,7 +13,7 @@ rotas.post('/usuarios', usuarios.cadastrarUsuario); //feito knex
 rotas.post('/login', login.login); //feito knex
 
 // filtro para verificar usuario logado
-rotas.use(verificaLogin); //feito knex
+// rotas.use(verificaLogin); //feito knex
 
 // obter e atualizar perfil do usuario logado
 rotas.get('/perfil', usuarios.obterPerfil); //Não precisa de Knex

@@ -1,12 +1,14 @@
 const knex = require('../conexao');
 
 const listarProdutos = async (req, res) => {
-    const { usuario } = req;
-    const { categoria } = req.query;
+    // const { usuario } = req;
+    // const { categoria } = req.query;
 
     try {
 
-        const listaProdutos = await knex('produtos').where({usuario_id: usuario.id}).where('categoria', 'ilike', `%${categoria}%`).debug()
+        // const listaProdutos = await knex('produtos').where({usuario_id: usuario.id}).where('categoria', 'ilike', `%${categoria}%`).debug()
+        const listaProdutos = await knex('produtos')
+
 
         return res.status(200).json(listaProdutos);
     } catch (error) {
